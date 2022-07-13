@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,9 +95,41 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "crypto-order-book": {
+      "projectType": "library",
+      "root": "projects/crypto-order-book",
+      "sourceRoot": "projects/crypto-order-book/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/crypto-order-book/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/crypto-order-book/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/crypto-order-book/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/crypto-order-book/src/test.ts",
+            "tsConfig": "projects/crypto-order-book/tsconfig.spec.json",
+            "karmaConfig": "projects/crypto-order-book/karma.conf.js"
           }
         }
       }
