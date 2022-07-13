@@ -1,0 +1,7 @@
+import { ISocketConfig } from "crypto-order-book";
+
+export const APP_CONFIG: ISocketConfig = {
+    url: 'url',
+    apiKey: 'apiKey'
+  };
+// You should change the extension of this file to ts and fill with your url and apiKey to run this demo app.
